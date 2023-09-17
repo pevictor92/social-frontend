@@ -1,10 +1,15 @@
+import "./mainSection.scss";
+
 export default function MainSection() {
   return (
     <main>
       <div className="form-login-register">
-        <img alt="Logo" />
+        <img
+          src="/hero-image.jpg"
+          alt="Logo"
+        />
         <form>
-          <div>
+          <fieldset>
             <div className="input-field">
               <label htmlFor="user">User</label>
               <input
@@ -21,14 +26,9 @@ export default function MainSection() {
                 placeholder="Password"
               />
             </div>
-          </div>
+          </fieldset>
           <button>Login</button>
         </form>
-        <div>
-          <p>
-            Don&apos;t have an account?<a>Sign up</a>
-          </p>
-        </div>
       </div>
     </main>
   );

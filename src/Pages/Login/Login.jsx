@@ -1,12 +1,12 @@
 import Footer from "../../Components/Footer/Footer";
-import Header from "../../Components/Header/Header";
+import HeaderLogOut from "../../Components/Header/HeaderLogOut";
 import MainSection from "../../Components/Main/MainSection";
 import "./login.scss";
 
 export default function Login() {
   return (
     <>
-      <Header />
+      <HeaderLogOut />
       <MainSection />
       <Footer />
     </>
