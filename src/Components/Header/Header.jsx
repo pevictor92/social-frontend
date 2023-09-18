@@ -7,7 +7,7 @@ export default function Header() {
     <header>
       <nav>
         <img
-          src="/olive-logo.png"
+          src="/oliver-logo.png"
           alt="Logo"
         />
         <Link to="/">

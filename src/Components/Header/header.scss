@@ -23,7 +23,7 @@ header {
     justify-content: space-between;
 
     img {
-      max-height: 50%;
+      max-height: 80%;
     }
 
     svg {
@@ -33,9 +33,5 @@ header {
         color: #cccccc;
       }
     }
-  }
-
-  .nav-loggedout {
-    justify-content: center;
   }
 }

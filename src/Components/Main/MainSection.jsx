@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./mainSection.scss";
 
 export default function MainSection() {
@@ -5,7 +6,7 @@ export default function MainSection() {
     <main>
       <div className="form-login-register">
         <img
-          src="/hero-image.jpg"
+          src="/hero-image.png"
           alt="Logo"
         />
         <form>
@@ -28,6 +29,9 @@ export default function MainSection() {
             </div>
           </fieldset>
           <button>Login</button>
+          <p>
+            Don&apos;t have an account? <Link to="/register">Sign up</Link>
+          </p>
         </form>
       </div>
     </main>
