@@ -1,3 +1,5 @@
+import RegisterMainSection from "../../Components/RegisterMain/RegisterMainSection";
+
 export default function Register() {
-  return <h1>Register</h1>;
+  return <RegisterMainSection />;
 }
