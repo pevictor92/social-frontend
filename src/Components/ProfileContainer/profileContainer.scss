@@ -1,0 +1,142 @@
+$blue: #0095f6;
+$lightBlue: #74bcec;
+$lightGrey: #ccc;
+
+$breakPoint: 680px;
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  margin-top: 10vh;
+
+  .profile-header {
+    max-width: 1000px;
+    width: 80%;
+    min-height: 25vh;
+    padding: 2em 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+
+    @media (max-width: $breakPoint) {
+      grid-template-columns: 1fr;
+      min-height: 35vh;
+    }
+
+    img {
+      height: 150px;
+      width: 150px;
+
+      justify-self: center;
+      align-self: center;
+
+      object-fit: cover;
+
+      border-radius: 75px;
+
+      @media (max-width: $breakPoint) {
+        height: 100px;
+        width: 100px;
+        border-radius: 50px;
+      }
+    }
+
+    .profile-user-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        font-size: 2em;
+        font-weight: normal;
+        margin-bottom: 0.75em;
+      }
+
+      h2 {
+        font-size: 1em;
+        margin: 0.5em 0;
+      }
+
+      p {
+        font-size: 1em;
+        margin: 0.25em 0;
+      }
+
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        color: #00376b;
+      }
+
+      @media (max-width: $breakPoint) {
+        h1 {
+          font-size: 1.5em;
+          align-self: center;
+        }
+
+        h2 {
+          font-size: 1em;
+        }
+
+        p {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+
+  .profile-pics {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+
+    margin-bottom: 15vh;
+
+    .profile-pic {
+      overflow: hidden;
+      max-width: 300px;
+      max-height: 300px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @media (max-width: 1000px) {
+        max-height: 275px;
+      }
+
+      @media (max-width: 750px) {
+        max-height: 225px;
+      }
+
+      @media (max-width: 600px) {
+        max-height: 200px;
+      }
+
+      @media (max-width: 550px) {
+        max-height: 175px;
+      }
+
+      @media (max-width: 450px) {
+        max-height: 140px;
+      }
+
+      @media (max-width: 400px) {
+        max-height: 110px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      grid-gap: 1em;
+    }
+
+    @media (max-width: 600px) {
+      grid-gap: 0.25em;
+    }
+  }
+}

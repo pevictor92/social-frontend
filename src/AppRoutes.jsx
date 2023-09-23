@@ -7,7 +7,7 @@ import Post from "./Pages/Post/Post";
 import { useState } from "react";
 
 export default function AppRoutes() {
-  const [userId, setUserID] = useState(localStorage.getItem("InstagramUserId"));
+  const [userId, setUserID] = useState(localStorage.getItem("SocialUserId"));
 
   function updateUserId(user) {
     setUserID(user);

@@ -23,6 +23,7 @@ export default function FeedContainer() {
     }
     getAllPosts();
   }, [postInteraction]);
+  
   return (
     <div className="feed-container">
       {allPosts === null ? (

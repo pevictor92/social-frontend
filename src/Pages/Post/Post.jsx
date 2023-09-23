@@ -1,12 +1,12 @@
 import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
-import MainSection from "../../Components/LoginMain/LoginMainSection";
+import PostContainer from "../../Components/PostContainer/PostContainer";
 
-export default function Post({cleanUserId}) {
+export default function Post({ cleanUserId }) {
   return (
     <>
-      <Header />
-      <MainSection cleanUserId={cleanUserId}/>
+      <Header cleanUserId={cleanUserId} />
+      <PostContainer />
       <Footer />
     </>
   );

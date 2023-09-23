@@ -1,6 +1,5 @@
 import "./feedCard.scss";
 import api from "../../Services/Api/Api";
-
 import { useState } from "react";
 
 export default function FeedCard({
@@ -11,7 +10,7 @@ export default function FeedCard({
   id,
   interaction,
 }) {
-  const [userId] = useState(localStorage.getItem("InstagramUserId"));
+  const [userId] = useState(localStorage.getItem("SocialUserId"));
 
   async function likeAPost() {
     try {
@@ -76,7 +75,7 @@ export default function FeedCard({
           {likes.length > 1 ? (
             <h3>{likes.length} users liked this photo</h3>
           ) : likes.length === 1 ? (
-            <h3>1 user</h3>
+            <h3>1 user liked this photo</h3>
           ) : null}
         </div>
         <div className="card-info">
