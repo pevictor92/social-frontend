@@ -3,10 +3,10 @@ import Footer from "../../Components/Footer/Footer";
 import Header from "../../Components/Header/Header";
 import "./feed.scss";
 
-export default function Feed() {
+export default function Feed(CleanUserId) {
   return (
     <>
-      <Header />
+      <Header CleanUserId={CleanUserId} />
       <FeedContainer />
       <Footer />
     </>

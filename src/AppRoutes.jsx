@@ -1,32 +1,60 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Login from "./Pages/Login/Login";
 import Feed from "./Pages/Feed/Feed";
 import Register from "./Pages/Register/Register";
 import Profile from "./Pages/Profile/Profile";
 import Post from "./Pages/Post/Post";
+import { useState } from "react";
 
 export default function AppRoutes() {
+  const [userId, setUserID] = useState(localStorage.getItem("InstagramUserId"));
+
+  function updateUserId(user) {
+    setUserID(user);
+  }
+
+  function cleanUserId() {
+    setUserID(null);
+  }
   return (
     <Routes>
       <Route
         path="/"
-        element={<Login />}
+        element={
+          userId ? (
+            <Navigate to="/feed" />
+          ) : (
+            <Login updateUserId={updateUserId} />
+          )
+        }
       />
       <Route
         path="/register"
-        element={<Register />}
-      />
-      <Route
-        path="/profile"
-        element={<Profile />}
+        element={
+          userId ? (
+            <Navigate to="/feed" />
+          ) : (
+            <Register updateUserId={updateUserId} />
+          )
+        }
       />
       <Route
         path="/feed"
-        element={<Feed />}
+        element={
+          userId ? <Feed cleanUserId={cleanUserId} /> : <Navigate to="/" />
+        }
       />
       <Route
         path="/post"
-        element={<Post />}
+        element={
+          userId ? <Post cleanUserId={cleanUserId} /> : <Navigate to="/" />
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          userId ? <Profile cleanUserId={cleanUserId} /> : <Navigate to="/" />
+        }
       />
     </Routes>
   );

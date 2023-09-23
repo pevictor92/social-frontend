@@ -1,5 +1,5 @@
 import RegisterMainSection from "../../Components/RegisterMain/RegisterMainSection";
 
-export default function Register() {
-  return <RegisterMainSection />;
+export default function Register(updateUserId) {
+  return <RegisterMainSection updateUserId={updateUserId} />;
 }

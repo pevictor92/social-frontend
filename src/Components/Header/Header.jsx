@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
 import { IoMdExit } from "react-icons/io";
 import "./header.scss";
 
-export default function Header() {
+export default function Header({ cleanUserId }) {
+  function logoutHandler() {
+    cleanUserId();
+    localStorage.clear();
+  }
+
   return (
     <header>
       <nav>
@@ -10,9 +14,7 @@ export default function Header() {
           src="/oliver-logo.png"
           alt="Logo"
         />
-        <Link to="/">
-          <IoMdExit />
-        </Link>
+          <IoMdExit onClick={logoutHandler} />
       </nav>
     </header>
   );

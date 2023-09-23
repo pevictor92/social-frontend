@@ -21,7 +21,6 @@ export default function FeedCard({
         },
       });
       interaction();
-      //alert('Foto curtida com sucesso!')
     } catch (err) {
       alert("Unable to like this photo");
     }
@@ -35,7 +34,6 @@ export default function FeedCard({
         },
       });
       interaction();
-      //alert('Foto descurtida com sucesso!')
     } catch (err) {
       alert("Unable to dislike this photo");
     }

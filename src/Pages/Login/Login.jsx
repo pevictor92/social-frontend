@@ -3,11 +3,11 @@ import Header from "../../Components/Header/Header";
 import Footer from "../../Components/Footer/Footer";
 import "./login.scss";
 
-export default function Login() {
+export default function Login(updateUserId) {
   return (
     <>
       <Header />
-      <LoginMainSection />
+      <LoginMainSection updateUserid={updateUserId}/>
       <Footer />
     </>
   );
