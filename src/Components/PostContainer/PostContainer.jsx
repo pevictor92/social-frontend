@@ -7,7 +7,7 @@ import UserInputDefault from "../UserInputDefault/UserInputDefault";
 
 export default function PostContainer() {
   const [user] = useState(localStorage.getItem("SocialUserId"));
-  const [picture, setPicture] = useState("");
+  const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
 
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ export default function PostContainer() {
   async function postImage(e) {
     e.preventDefault();
     const data = {
-      picture,
+      image,
       description,
     };
     try {
@@ -24,7 +24,7 @@ export default function PostContainer() {
           user,
         },
       });
-      navigate.push("/feed");
+      navigate("/feed");
     } catch (err) {
       alert("failed to post photo");
     }
@@ -32,9 +32,9 @@ export default function PostContainer() {
 
   return (
     <main className="post-container">
-      {picture ? (
+      {image ? (
         <img
-          src={picture}
+          src={image}
           alt={description}
         />
       ) : (
@@ -49,8 +49,8 @@ export default function PostContainer() {
           <UserInputDefault
             title="Insert a link o the image"
             type="text"
-            state={picture}
-            setState={(e) => setPicture(e.target.value)}
+            state={image}
+            setState={(e) => setImage(e.target.value)}
           />
           <UserInputDefault
             title="Photo description"

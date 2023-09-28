@@ -3,7 +3,7 @@ import api from "../../Services/Api/Api";
 import { useState } from "react";
 
 export default function FeedCard({
-  picture,
+  image,
   description,
   likes,
   user,
@@ -49,7 +49,7 @@ export default function FeedCard({
       </div>
       <div className="card-photo">
         <img
-          src={picture}
+          src={image}
           alt={description}
         />
       </div>
@@ -57,7 +57,7 @@ export default function FeedCard({
         <div className="card-metadata">
           {likes.includes(userId) ? (
             <img
-              src="/outline-heart.svg"
+              src="/fill-heart.svg"
               alt="Likes"
               onClick={() => {
                 unlikeAPost();
@@ -65,7 +65,7 @@ export default function FeedCard({
             />
           ) : (
             <img
-              src="/filed-heart.svg"
+              src="/outline-heart.svg"
               alt="Likes"
               onClick={() => {
                 likeAPost();

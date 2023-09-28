@@ -8,8 +8,7 @@ header {
   justify-content: center;
   align-items: center;
 
-  border-bottom: solid 1px;
-  border-bottom-color: #ccc;
+  border-bottom: solid 1px #ccc;
 
   position: fixed;
 
@@ -23,7 +22,7 @@ header {
     justify-content: space-between;
 
     img {
-      max-height: 80%;
+      max-height: 70%;
     }
 
     svg {
@@ -32,6 +31,8 @@ header {
       &:hover {
         color: #cccccc;
       }
+
+      font-size: 1.7em;
     }
   }
 }

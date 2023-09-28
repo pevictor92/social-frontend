@@ -15,6 +15,7 @@ export default function AppRoutes() {
 
   function cleanUserId() {
     setUserID(null);
+    localStorage.removeItem("SocialUserId");
   }
   return (
     <Routes>

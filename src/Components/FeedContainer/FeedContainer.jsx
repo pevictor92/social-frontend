@@ -23,7 +23,7 @@ export default function FeedContainer() {
     }
     getAllPosts();
   }, [postInteraction]);
-  
+
   return (
     <div className="feed-container">
       {allPosts === null ? (
@@ -34,7 +34,7 @@ export default function FeedContainer() {
           <FeedCard
             key={post._id}
             id={post._id}
-            picture={post.picture}
+            image={post.image}
             description={post.description}
             likes={post.likes}
             user={post.user}

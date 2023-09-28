@@ -2,6 +2,7 @@ import { useState } from "react";
 import api from "../../Services/Api/Api";
 import UserInputDefault from "../UserInputDefault/UserInputDefault";
 import { useNavigate } from "react-router-dom";
+import "./registerMainSection.scss";
 
 import login from "../../Utils/login";
 
@@ -36,7 +37,7 @@ export default function RegisterMainSection({ updateUserId }) {
 
       updateUserId(data.data._id);
 
-      navigate.push("/feed");
+      navigate("/feed");
     } catch (err) {
       alert("Register error, try again");
       setLoading(false);
@@ -45,7 +46,7 @@ export default function RegisterMainSection({ updateUserId }) {
 
   return (
     <main>
-      <div className="form-login-register">
+      <div className="form-register">
         <img
           src="/hero-image.png"
           alt="Logo"
@@ -55,7 +56,7 @@ export default function RegisterMainSection({ updateUserId }) {
             <h1>Registering user...</h1>
           ) : (
             <>
-              <h1>Sign up to see photos from others.</h1>
+              <h1>Sign up to see photos from other users</h1>
               <fieldset>
                 <UserInputDefault
                   title="User"

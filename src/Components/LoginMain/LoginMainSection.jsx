@@ -1,16 +1,18 @@
-import { Link, Navigate } from "react-router-dom";
-import "./loginMainSection.scss";
-import UserInputDefault from "../UserInputDefault/UserInputDefault";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "./loginMainSection.scss";
 
-import api from "../../Services/Api/Api";
 import login from "../../Utils/login";
+import UserInputDefault from "../../Components/UserInputDefault/UserInputDefault";
+import api from "../../Services/Api/Api";
 
-export default function LoginMainSection(updateUserId) {
+export default function LoginMainSection({ updateUserId }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   async function loginHandler(e) {
     e.preventDefault();
@@ -27,9 +29,10 @@ export default function LoginMainSection(updateUserId) {
 
       updateUserId(data.data._id);
 
-      Navigate.push("/feed");
+      navigate("/feed");
     } catch (err) {
-      alert("Login failed, try again.");
+      alert("Login failed, try again");
+      console.log(err);
       setLoading(false);
     }
   }
@@ -39,13 +42,14 @@ export default function LoginMainSection(updateUserId) {
       <div className="form-login-register">
         <img
           src="/hero-image.png"
-          alt="Logo"
+          alt="Image"
         />
         <form>
           {loading ? (
-            <h1> Loading...</h1>
+            <h1>Loading...</h1>
           ) : (
             <>
+              <h1>Enter</h1>
               <fieldset>
                 <UserInputDefault
                   title="User"
@@ -60,7 +64,7 @@ export default function LoginMainSection(updateUserId) {
                   setState={(e) => setPassword(e.target.value)}
                 />
               </fieldset>
-              <button onClick={loginHandler}>Login</button>
+              <button onClick={loginHandler}>Sign in</button>
               <p>
                 Don&apos;t have an account? <Link to="/register">Sign up</Link>
               </p>
