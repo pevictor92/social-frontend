@@ -40,14 +40,14 @@ export default function PostContainer() {
       ) : (
         <img
           src="/default-image.png"
-          alt="Insert an image"
+          alt="Insert photo"
         />
       )}
       <form>
         <h1>Post your photo</h1>
         <fieldset>
           <UserInputDefault
-            title="Insert a link o the image"
+            title="Insert link of the photo"
             type="text"
             state={image}
             setState={(e) => setImage(e.target.value)}
