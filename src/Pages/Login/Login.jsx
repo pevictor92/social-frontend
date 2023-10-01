@@ -1,13 +1,13 @@
-import Header from "../../Components/Header/Header";
+import HeaderLogout from "../../Components/HeaderLogout/HeaderLogout";
 import LoginMainSection from "../../Components/LoginMain/LoginMainSection";
-import Footer from "../../Components/Footer/Footer";
+import FooterLogout from "../../Components/FooterLogout/FooterLogout";
 
 export default function Login({ updateUserId }) {
   return (
     <>
-      <Header />
+      <HeaderLogout />
       <LoginMainSection updateUserId={updateUserId} />
-      <Footer />
+      <FooterLogout />
     </>
   );
 }

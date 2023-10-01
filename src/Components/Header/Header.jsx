@@ -11,10 +11,10 @@ export default function Header({ cleanUserId }) {
     <header>
       <nav>
         <img
-          src="/oliver-logo.png"
-          alt="Logo"
+          src="/oliver-icon.png"
+          alt="icon"
         />
-          <IoMdExit onClick={logoutHandler} />
+        <IoMdExit onClick={logoutHandler} />
       </nav>
     </header>
   );

@@ -1,8 +1,4 @@
-$blue: #0095f6;
-$lightBlue: #74bcec;
-$lightGrey: #ccc;
-
-$breakPoint: 680px;
+@import "../../main.scss";
 
 main {
   width: 100%;
@@ -48,7 +44,7 @@ main {
       background: white;
       width: 70%;
       height: 100%;
-      max-height: 300px;
+      max-height: 500px;
 
       display: flex;
       flex-direction: column;

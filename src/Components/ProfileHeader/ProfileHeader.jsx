@@ -1,3 +1,5 @@
+import "./profileHeader.scss";
+
 export default function ProfileHeader({
   username,
   name,

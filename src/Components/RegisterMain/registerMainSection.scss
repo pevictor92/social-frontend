@@ -1,10 +1,6 @@
-$blue: #0095f6;
-$lightBlue: #74bcec;
-$lightGrey: #ccc;
+@import "../../main.scss";
 
-$breakPoint: 680px;
-
-.form-register {
+.form-login-register {
   width: 100%;
   max-width: 1000px;
   height: 100%;

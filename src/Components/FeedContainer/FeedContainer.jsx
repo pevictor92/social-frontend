@@ -1,8 +1,9 @@
+import { useEffect, useState } from "react";
 import "./feedContainer.scss";
 import api from "../../Services/Api/Api";
 
 import FeedCard from "../FeedCard/FeedCard";
-import { useEffect, useState } from "react";
+
 
 export default function FeedContainer() {
   const [allPosts, setAllPosts] = useState(null);

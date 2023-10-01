@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import "./footer.scss";
 import { MdHomeFilled, MdPhotoCamera, MdPerson } from "react-icons/md";
+import "./footer.scss";
 
 export default function Footer() {
   return (

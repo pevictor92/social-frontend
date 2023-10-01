@@ -1,6 +1,6 @@
+import { useState } from "react";
 import "./feedCard.scss";
 import api from "../../Services/Api/Api";
-import { useState } from "react";
 
 export default function FeedCard({
   image,
@@ -51,6 +51,7 @@ export default function FeedCard({
         <img
           src={image}
           alt={description}
+          loading="lazy"
         />
       </div>
       <div className="card-footer">

@@ -46,7 +46,7 @@ export default function RegisterMainSection({ updateUserId }) {
 
   return (
     <main>
-      <div className="form-register">
+      <div className="form-login-register">
         <img
           src="/hero-image.png"
           alt="Logo"
@@ -89,7 +89,7 @@ export default function RegisterMainSection({ updateUserId }) {
                   setState={(e) => setSite(e.target.value)}
                 />
                 <UserInputDefault
-                  title="Avatar"
+                  title="Avatar url"
                   type="text"
                   state={avatar}
                   setState={(e) => setAvatar(e.target.value)}
